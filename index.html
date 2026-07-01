@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kaysers'Bier - Restaurant alsacien à Kaysersberg</title>
+  <meta name="description" content="Restaurant alsacien au coeur de Kaysersberg. Choucroutes, baeckeoffe, tartes flambées et bières maison, servis dans un cadre chaleureux au coeur de la cité médiévale." />
+
+  <meta property="og:title" content="Kaysers'Bier - Restaurant alsacien à Kaysersberg" />
+  <meta property="og:description" content="Cuisine alsacienne, tartes flambées et bières maison au coeur de Kaysersberg." />
+  <meta property="og:type" content="restaurant" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#accueil" class="nav__brand">
+        <span class="nav__brand-mark">K</span>
+        <span class="nav__brand-name">Kaysers'Bier</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Navigation principale">
+        <a href="#maison">La maison</a>
+        <a href="#incontournables">Incontournables</a>
+        <a href="#carte">La carte</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#infos">Infos</a>
+        <a href="#infos" class="btn btn--sm btn--primary nav__cta">Réserver</a>
+      </nav>
+
+      <button class="nav__burger" id="navBurger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="accueil">
+    <!-- TODO PHOTO: remplacer par une belle photo de la salle, d'un plat signature ou de la façade (paysage, min 1600x1100). -->
+    <div class="hero__media">
+      <img src="https://picsum.photos/seed/kaysersbier-hero-alsace/1800/1200" alt="Ambiance du restaurant Kaysers'Bier" />
+      <div class="hero__scrim"></div>
+    </div>
+
+    <div class="hero__content">
+      <p class="eyebrow eyebrow--light">Restaurant alsacien · Kaysersberg</p>
+      <h1 class="hero__title">Kaysers'Bier</h1>
+      <p class="hero__lede">
+        Spécialités d'Alsace, tartes flambées et bières maison, servies dans un
+        cadre chaleureux au coeur de la cité médiévale.
+      </p>
+      <div class="hero__actions">
+        <a href="#carte" class="btn btn--primary">Voir la carte</a>
+        <a href="#infos" class="btn btn--ghost">Nous trouver</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MAISON ============ -->
+  <section class="section maison reveal" id="maison">
+    <div class="wrap maison__grid">
+      <div class="maison__text">
+        <p class="eyebrow">Notre maison</p>
+        <h2 class="h2">L'Alsace dans l'assiette, au pied des vignes</h2>
+        <p class="lead">
+          Au Kaysers'Bier, on sert l'Alsace comme on l'aime : généreuse et sans
+          chichis.
+        </p>
+        <p>
+          Choucroutes mijotées, baeckeoffe cuit au vin, tartes flambées croustillantes
+          et bières brassées sous notre nom. Le tout à deux pas des maisons à
+          colombages de Kaysersberg, l'un des plus beaux villages d'Alsace.
+        </p>
+        <p>
+          Une cuisine de tradition, des produits de la région et des vins des Côtes
+          de Kaysersberg pour accompagner chaque plat.
+        </p>
+        <ul class="maison__facts">
+          <li><strong>Fait maison</strong><span>Recettes alsaciennes traditionnelles</span></li>
+          <li><strong>Bières Kaysers'bier</strong><span>Blonde, blanche, ambrée, brune</span></li>
+          <li><strong>Vins d'Alsace</strong><span>Côtes de Kaysersberg et grands crus</span></li>
+        </ul>
+      </div>
+      <div class="maison__media">
+        <!-- TODO PHOTO: photo verticale d'un plat signature ou de la salle (portrait, min 900x1200). -->
+        <img src="https://picsum.photos/seed/kaysersbier-plat-choucroute/900/1200" alt="Plat alsacien servi au Kaysers'Bier" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INCONTOURNABLES ============ -->
+  <section class="section section--alt incontournables reveal" id="incontournables">
+    <div class="wrap">
+      <header class="section__head">
+        <p class="eyebrow">Les incontournables</p>
+        <h2 class="h2">Ce qu'il faut goûter</h2>
+      </header>
+
+      <div class="bento">
+        <article class="tile tile--lg">
+          <!-- TODO PHOTO: tarte flambée sortie du four -->
+          <img src="https://picsum.photos/seed/kaysersbier-tarte-flambee/1200/900" alt="Tarte flambée" />
+          <div class="tile__body">
+            <h3>Tartes flambées</h3>
+            <p>Servies à toute heure, de la nature au Munster. La spécialité de la maison.</p>
+            <span class="tile__price">dès 10 €</span>
+          </div>
+        </article>
+
+        <article class="tile">
+          <!-- TODO PHOTO: choucroute garnie -->
+          <img src="https://picsum.photos/seed/kaysersbier-choucroute-royale/800/700" alt="Choucroute royale" />
+          <div class="tile__body">
+            <h3>Choucroute royale</h3>
+            <p>Choucroute alsacienne et jarret braisé.</p>
+            <span class="tile__price">30 €</span>
+          </div>
+        </article>
+
+        <article class="tile">
+          <!-- TODO PHOTO: chope de bière maison -->
+          <img src="https://picsum.photos/seed/kaysersbier-biere-maison/800/700" alt="Bière maison Kaysers'bier" />
+          <div class="tile__body">
+            <h3>Bières maison</h3>
+            <p>Blonde, blanche, ambrée et brune, à la pression.</p>
+            <span class="tile__price">dès 3 €</span>
+          </div>
+        </article>
+
+        <article class="tile">
+          <!-- TODO PHOTO: baeckeoffe en cocotte -->
+          <img src="https://picsum.photos/seed/kaysersbier-baeckeoffe/800/700" alt="Baeckeoffe alsacien" />
+          <div class="tile__body">
+            <h3>Baeckeoffe</h3>
+            <p>Trois viandes et légumes mijotés au vin blanc.</p>
+            <span class="tile__price">20 €</span>
+          </div>
+        </article>
+
+        <article class="tile">
+          <!-- TODO PHOTO: tarte aux myrtilles -->
+          <img src="https://picsum.photos/seed/kaysersbier-tarte-myrtilles/800/700" alt="Tarte aux myrtilles" />
+          <div class="tile__body">
+            <h3>Tarte aux myrtilles</h3>
+            <p>Le dessert alsacien par excellence.</p>
+            <span class="tile__price">6 €</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CARTE ============ -->
+  <section class="section carte reveal" id="carte">
+    <div class="wrap">
+      <header class="section__head section__head--center">
+        <h2 class="h2">La carte</h2>
+        <p class="section__sub">Cuisine alsacienne, tartes flambées, vins de la région et bières maison. Prix service compris.</p>
+      </header>
+
+      <div class="tabs" id="menuTabs" role="tablist" aria-label="Catégories de la carte">
+        <button class="tab is-active" role="tab" aria-selected="true" data-target="cat-specialites">Spécialités</button>
+        <button class="tab" role="tab" aria-selected="false" data-target="cat-tartes">Tartes flambées &amp; crêpes</button>
+        <button class="tab" role="tab" aria-selected="false" data-target="cat-burgers">Burgers &amp; petits plats</button>
+        <button class="tab" role="tab" aria-selected="false" data-target="cat-desserts">Desserts &amp; douceurs</button>
+        <button class="tab" role="tab" aria-selected="false" data-target="cat-vins">Vins &amp; crémants</button>
+        <button class="tab" role="tab" aria-selected="false" data-target="cat-bieres">Bières &amp; cocktails</button>
+        <button class="tab" role="tab" aria-selected="false" data-target="cat-boissons">Boissons</button>
+      </div>
+
+      <!-- SPECIALITES -->
+      <div class="menu-panel is-active" id="cat-specialites" role="tabpanel">
+        <div class="menu-cols">
+          <div class="menu-group">
+            <h3 class="menu-group__title">Menu du terroir</h3>
+            <ul class="menu-list">
+              <li class="menu-item">
+                <div class="menu-item__info"><span class="menu-item__name">Quiche Lorraine, salade verte</span><span class="menu-item__desc">Jambon, lardons. <em>Local quiche with ham and bacon, green salad</em></span></div>
+                <span class="menu-item__price">18 €</span>
+              </li>
+              <li class="menu-item">
+                <div class="menu-item__info"><span class="menu-item__name">Tourte vigneronne alsacienne, salade verte</span><span class="menu-item__desc">Porc et veau. <em>Winegrower's pie, green salad</em></span></div>
+                <span class="menu-item__price">18 €</span>
+              </li>
+            </ul>
+
+            <h3 class="menu-group__title">Nos spécialités alsaciennes</h3>
+            <ul class="menu-list">
+              <li class="menu-item">
+                <div class="menu-item__info"><span class="menu-item__name">Choucroute alsacienne</span><span class="menu-item__desc">Viandes, saucisses et pommes de terre. <em>Sauerkraut with meats and sausages</em></span></div>
+                <span class="menu-item__price">20 €</span>
+              </li>
+              <li class="menu-item">
+                <div class="menu-item__info"><span class="menu-item__name">Choucroute royale</span><span class="menu-item__desc">Choucroute alsacienne avec jarret braisé.</span></div>
+                <span class="menu-item__price">30 €</span>
+              </li>
+              <li class="menu-item">
+                <div class="menu-item__info"><span class="menu-item__name">Baeckeoffe alsacien, salade verte</span><span class="menu-item__desc">3 viandes, pommes de terre et légumes cuits au vin. <em>Three meats slow-cooked in wine</em></span></div>
+                <span class="menu-item__price">20 €</span>
+              </li>
+              <li class="menu-item">
+                <div class="menu-item__info"><span class="menu-item__name">Poêlée alsacienne, salade verte</span><span class="menu-item__desc">Pommes de terre, oignons, lardons et Munster.</span></div>
+                <span class="menu-item__price">18 €</span>
+              </li>
+              <li class="menu-item">
+                <div class="menu-item__info"><span class="menu-item__name">Jarret de porc braisé, frites et salade verte</span><span class="menu-item__desc">Supplément Munster +4 €.</span></div>
+                <span class="menu-item__price">22 €</span>
+              </li>
+              <li class="menu-item">
+                <div class="menu-item__info"><span class="menu-item__name">Gratin de spaetzlés au Munster, salade verte</span></div>
+                <span class="menu-item__price">18 €</span>
+              </li>
+              <li class="menu-item">
+                <div class="menu-item__info"><span class="menu-item__name">Gratin de spaetzlés au Munster et Kassler, salade</span></div>
+                <span class="menu-item__price">25 €</span>
+              </li>
+              <li class="menu-item">
+                <div class="menu-item__info"><span class="menu-item__name">Kassler, frites, salade</span></div>
+                <span class="menu-item__price">20 €</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- TARTES FLAMBEES -->
+      <div class="menu-panel" id="cat-tartes" role="tabpanel" hidden>
+        <div class="menu-cols">
+          <div class="menu-group">
+            <h3 class="menu-group__title">Tartes flambées <span class="menu-group__note">servies à toute heure</span></h3>
+            <ul class="menu-list">
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Nature</span><span class="menu-item__desc">Fromage blanc, oignons, lardons.</span></div><span class="menu-item__price">10 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Gratinée</span><span class="menu-item__desc">Fromage blanc, oignons, lardons, emmental.</span></div><span class="menu-item__price">14 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Munster</span><span class="menu-item__desc">Fromage blanc, oignons, lardons, emmental, Munster.</span></div><span class="menu-item__price">14 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Chèvre</span><span class="menu-item__desc">Fromage blanc, oignons, lardons, emmental, chèvre.</span></div><span class="menu-item__price">14 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Forestière</span><span class="menu-item__desc">Fromage blanc, oignons, champignons, emmental. Lardons sur demande.</span></div><span class="menu-item__price">14 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Saumon</span><span class="menu-item__desc">Fromage blanc, oignons, saumon, câpres, aneth, emmental.</span></div><span class="menu-item__price">14 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Escargots</span><span class="menu-item__desc">Fromage blanc, oignons, escargots, emmental.</span></div><span class="menu-item__price">14 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Italienne</span><span class="menu-item__desc">Sauce tomate, oignons, olives, jambon, champignons, emmental.</span></div><span class="menu-item__price">14 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Myrtilles</span><span class="menu-item__desc">Fromage blanc, myrtilles, sucre.</span></div><span class="menu-item__price">12 €</span></li>
+            </ul>
+          </div>
+          <div class="menu-group">
+            <h3 class="menu-group__title">Baguettes flambées</h3>
+            <ul class="menu-list">
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Gratinée</span><span class="menu-item__desc">Fromage blanc, lardons, oignons, emmental.</span></div><span class="menu-item__price">6 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Munster</span><span class="menu-item__desc">Fromage blanc, lardons, oignons, emmental, Munster.</span></div><span class="menu-item__price">8 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Chèvre</span><span class="menu-item__desc">Fromage blanc, lardons, oignons, emmental, chèvre.</span></div><span class="menu-item__price">8 €</span></li>
+            </ul>
+
+            <h3 class="menu-group__title">Crêpes salées</h3>
+            <ul class="menu-list">
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Jambon fromage</span></div><span class="menu-item__price">6 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Crêpe alsacienne</span><span class="menu-item__desc">Jambon, emmental, Munster.</span></div><span class="menu-item__price">8 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Crêpe italienne</span><span class="menu-item__desc">Sauce tomate, jambon, emmental.</span></div><span class="menu-item__price">8 €</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- BURGERS -->
+      <div class="menu-panel" id="cat-burgers" role="tabpanel" hidden>
+        <div class="menu-cols">
+          <div class="menu-group">
+            <h3 class="menu-group__title">Burgers</h3>
+            <ul class="menu-list">
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Burger Alsacien</span><span class="menu-item__desc">Steak, Munster, oignons, tomates, salade, cornichons.</span></div><span class="menu-item__price">13 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Burger Comté</span><span class="menu-item__desc">Steak, comté, bacon, oignons, tomates, salade, cornichons.</span></div><span class="menu-item__price">13 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Chicken burger</span><span class="menu-item__desc">Poulet, oignons, tomates, salade, cornichons, sauce bbq.</span></div><span class="menu-item__price">13 €</span></li>
+            </ul>
+          </div>
+          <div class="menu-group">
+            <h3 class="menu-group__title">Pour les petits et les grands</h3>
+            <ul class="menu-list">
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Saucisses chaudes, frites et salade verte</span></div><span class="menu-item__price">15 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Jambon blanc, frites et salade verte</span></div><span class="menu-item__price">15 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Steak haché 120 g, frites et salade verte</span></div><span class="menu-item__price">15 €</span></li>
+            </ul>
+            <h3 class="menu-group__title">À côté</h3>
+            <ul class="menu-list">
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Salade verte</span></div><span class="menu-item__price">4 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Frites</span></div><span class="menu-item__price">4 €</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- DESSERTS -->
+      <div class="menu-panel" id="cat-desserts" role="tabpanel" hidden>
+        <div class="menu-cols">
+          <div class="menu-group">
+            <h3 class="menu-group__title">Nos desserts</h3>
+            <ul class="menu-list">
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Tarte aux myrtilles</span></div><span class="menu-item__price">6 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Kougelhopf glacé aromatisé au Marc de Gewurztraminer</span></div><span class="menu-item__price">6 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Kougelhopf glacé arrosé au Marc de Gewurztraminer</span></div><span class="menu-item__price">9 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Forêt Noire glacée</span></div><span class="menu-item__price">9 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Vacherin glacé</span></div><span class="menu-item__price">9 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Fondant au chocolat</span></div><span class="menu-item__price">6 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Tarte flambée aux myrtilles</span></div><span class="menu-item__price">12 €</span></li>
+            </ul>
+          </div>
+          <div class="menu-group">
+            <h3 class="menu-group__title">Coupes glacées</h3>
+            <ul class="menu-list">
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">La Kaysersberg</span><span class="menu-item__desc">Sorbet pêche de vigne, glaces vanille et chocolat, coulis de chocolat, chantilly.</span></div><span class="menu-item__price">9 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">La Riquewihr</span><span class="menu-item__desc">Glaces pistache, noisette, vanille, chantilly.</span></div><span class="menu-item__price">9 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">La Colmar</span><span class="menu-item__desc">Sorbets framboise, citron, fruits de la passion, coulis de fruits rouges, chantilly.</span></div><span class="menu-item__price">9 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">La Vosgienne</span><span class="menu-item__desc">Sorbets framboise, myrtille, glace vanille, coulis de fruits rouges, chantilly.</span></div><span class="menu-item__price">9 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">L'Alsacienne</span><span class="menu-item__desc">Sorbet citron arrosé au Marc de Gewurztraminer.</span></div><span class="menu-item__price">12 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Le chocolat liégeois</span><span class="menu-item__desc">2 boules chocolat, 1 boule vanille, chocolat chaud, coulis de chocolat, chantilly.</span></div><span class="menu-item__price">9 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Dame Blanche</span><span class="menu-item__desc">3 boules vanille, coulis de chocolat, chantilly.</span></div><span class="menu-item__price">9 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Le café liégeois</span><span class="menu-item__desc">3 boules café, un expresso chaud, chantilly.</span></div><span class="menu-item__price">9 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Meringue glacée chantilly</span><span class="menu-item__desc">Meringues, 2 boules au choix, chantilly.</span></div><span class="menu-item__price">9 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Coupe 3 boules au choix</span></div><span class="menu-item__price">7,50 €</span></li>
+              <li class="menu-item menu-item--sub"><div class="menu-item__info"><span class="menu-item__name">1 boule de glace</span></div><span class="menu-item__price">2,50 €</span></li>
+              <li class="menu-item menu-item--sub"><div class="menu-item__info"><span class="menu-item__name">Supplément chantilly</span></div><span class="menu-item__price">1 €</span></li>
+            </ul>
+            <p class="menu-note">Parfums au choix : café, vanille, chocolat, noisette, caramel, pistache, myrtille, pêche de vigne, fraise, fruits rouges, citron, passion.</p>
+          </div>
+          <div class="menu-group">
+            <h3 class="menu-group__title">Gaufres &amp; crêpes sucrées <span class="menu-group__note">gaufre / crêpe</span></h3>
+            <ul class="menu-list">
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Sucre</span></div><span class="menu-item__price">3,50 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Confiture</span></div><span class="menu-item__price">4 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Chocolat / Nutella</span></div><span class="menu-item__price">4 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Myrtilles</span></div><span class="menu-item__price">5 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Caramel beurre salé</span></div><span class="menu-item__price">5 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Spéculoos</span></div><span class="menu-item__price">5 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Chocolat blanc noisettes</span></div><span class="menu-item__price">5 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Grand Marnier <span class="menu-item__tag">crêpe</span></span></div><span class="menu-item__price">6 €</span></li>
+              <li class="menu-item menu-item--sub"><div class="menu-item__info"><span class="menu-item__name">Supplément chantilly</span></div><span class="menu-item__price">1 €</span></li>
+              <li class="menu-item menu-item--sub"><div class="menu-item__info"><span class="menu-item__name">Supplément 1 boule de glace</span></div><span class="menu-item__price">2,50 €</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- VINS -->
+      <div class="menu-panel" id="cat-vins" role="tabpanel" hidden>
+        <p class="menu-legend">Prix par contenance : 10 cl / 25 cl / 50 cl / 75 cl</p>
+        <div class="menu-cols">
+          <div class="menu-group">
+            <h3 class="menu-group__title">Vins d'Alsace, de tradition</h3>
+            <ul class="menu-list">
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Edelzwicker</span></div><span class="menu-item__price">3,50 / 7 / 14 / 21 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Sylvaner</span></div><span class="menu-item__price">3,50 / 7 / 14 / 21 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Pinot blanc, Côtes de Kaysersberg</span></div><span class="menu-item__price">4 / 8 / 16 / 24 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Pinot gris, Côtes de Kaysersberg</span></div><span class="menu-item__price">4 / 8 / 16 / 24 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Pinot noir rosé</span></div><span class="menu-item__price">4 / 8 / 16 / 24 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Pinot noir, Réserve Personnelle</span></div><span class="menu-item__price">4 / 8 / 16 / 24 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Riesling, Réserve Personnelle</span></div><span class="menu-item__price">4 / 8 / 16 / 24 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Muscat de Kaysersberg</span></div><span class="menu-item__price">4,50 / 9 / 18 / 27 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Gewurztraminer, Réserve Personnelle</span></div><span class="menu-item__price">4,50 / 9 / 18 / 27 €</span></li>
+            </ul>
+          </div>
+          <div class="menu-group">
+            <h3 class="menu-group__title">De prestige <span class="menu-group__note">Vins Haas, AOC Alsace</span></h3>
+            <ul class="menu-list">
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Pinot gris, Vieilles Vignes</span></div><span class="menu-item__price">4,90 / 10 / 20 / 30 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Riesling, Grand Cru Schlossberg</span></div><span class="menu-item__price">4,90 / 10 / 20 / 30 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Gewurztraminer, Vieilles Vignes</span></div><span class="menu-item__price">4,90 / 10 / 20 / 30 €</span></li>
+            </ul>
+
+            <h3 class="menu-group__title">Les fines bulles</h3>
+            <ul class="menu-list">
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Crémant brut</span><span class="menu-item__desc">10 cl / 75 cl.</span></div><span class="menu-item__price">4 / 24 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Crémant brut rosé</span><span class="menu-item__desc">10 cl / 75 cl.</span></div><span class="menu-item__price">4 / 24 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Crémant Royal</span><span class="menu-item__desc">Cassis, framboise ou mûre.</span></div><span class="menu-item__price">5,50 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Apéritif maison</span><span class="menu-item__desc">Crémant et pêche de vigne.</span></div><span class="menu-item__price">5,50 €</span></li>
+            </ul>
+
+            <h3 class="menu-group__title">Cidres <span class="menu-group__note">doux ou brut</span></h3>
+            <ul class="menu-list">
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Cidre</span><span class="menu-item__desc">10 cl / 25 cl / 50 cl / 75 cl.</span></div><span class="menu-item__price">3 / 6 / 12 / 18 €</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- BIERES & COCKTAILS -->
+      <div class="menu-panel" id="cat-bieres" role="tabpanel" hidden>
+        <div class="menu-cols">
+          <div class="menu-group">
+            <h3 class="menu-group__title">Bières pression <span class="menu-group__note">25 cl / 33 cl / 50 cl</span></h3>
+            <ul class="menu-list">
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Kaysers'bier blonde</span></div><span class="menu-item__price">3 / 4 / 6 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Kaysers'bier blanche</span></div><span class="menu-item__price">3,50 / 5 / 7 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Kaysers'bier ambrée</span></div><span class="menu-item__price">3,50 / 5 / 7 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Kaysers'bier brune</span></div><span class="menu-item__price">3,50 / 5 / 7 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Leffe blonde</span></div><span class="menu-item__price">3,50 / 5 / 7 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Kriek</span></div><span class="menu-item__price">3,50 / 5 / 7 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Panaché</span></div><span class="menu-item__price">3 / 4 / 6 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Monaco</span></div><span class="menu-item__price">3,50 / 5 / 7 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Amer, Picon ou Cynar</span></div><span class="menu-item__price">3,50 / 5 / 7 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Bière sans alcool</span><span class="menu-item__desc">33 cl.</span></div><span class="menu-item__price">4 €</span></li>
+            </ul>
+          </div>
+          <div class="menu-group">
+            <h3 class="menu-group__title">Cocktails</h3>
+            <ul class="menu-list">
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Cocktail Alsacien</span><span class="menu-item__desc">Crémant, Gewurztraminer, citron.</span></div><span class="menu-item__price">9 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Spritz Apérol</span><span class="menu-item__desc">Crémant, Apérol, tonic.</span></div><span class="menu-item__price">10 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Hugo</span><span class="menu-item__desc">Liqueur de sureau, crémant, menthe, citron.</span></div><span class="menu-item__price">10 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Pink Rosé</span><span class="menu-item__desc">Vin rosé, liqueur de framboise, crémant, fruits rouges.</span></div><span class="menu-item__price">10 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Mojito</span><span class="menu-item__desc">Rhum, sucre de canne, menthe, citron vert.</span></div><span class="menu-item__price">10 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Cuba Libre</span><span class="menu-item__desc">Rhum, Coca, citron.</span></div><span class="menu-item__price">9 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Tequila Sunrise</span><span class="menu-item__desc">Tequila, jus d'orange, grenadine.</span></div><span class="menu-item__price">9 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Gin Tonic</span><span class="menu-item__desc">Gin, Schweppes, citron.</span></div><span class="menu-item__price">9 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Tropical <span class="menu-item__tag">sans alcool</span></span><span class="menu-item__desc">Jus d'ananas, limonade, sirop de framboise, citron.</span></div><span class="menu-item__price">8 €</span></li>
+            </ul>
+
+            <h3 class="menu-group__title">Apéritifs &amp; digestifs</h3>
+            <ul class="menu-list">
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Apéritif maison</span><span class="menu-item__desc">Crémant et liqueur de pêche de vigne.</span></div><span class="menu-item__price">5,50 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Kir</span><span class="menu-item__desc">Cassis, mûre ou framboise.</span></div><span class="menu-item__price">4,50 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Whisky ou Martini</span></div><span class="menu-item__price">5 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Pastis ou Ricard</span></div><span class="menu-item__price">3,20 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Digestifs</span><span class="menu-item__desc">Marc de Gewurztraminer, Poire Williams, Kirsch, Framboise, Mirabelle, Quetsch.</span></div><span class="menu-item__price">6,50 €</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOISSONS -->
+      <div class="menu-panel" id="cat-boissons" role="tabpanel" hidden>
+        <div class="menu-cols">
+          <div class="menu-group">
+            <h3 class="menu-group__title">Softs</h3>
+            <ul class="menu-list">
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Coca-Cola, Coca Zéro</span><span class="menu-item__desc">33 cl / 50 cl.</span></div><span class="menu-item__price">3 / 5 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Orangina, Ice Tea</span><span class="menu-item__desc">33 cl.</span></div><span class="menu-item__price">3 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Schweppes, Schweppes agrumes</span><span class="menu-item__desc">33 cl.</span></div><span class="menu-item__price">3 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Fanta, Oasis</span><span class="menu-item__desc">33 cl.</span></div><span class="menu-item__price">3 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Jus de fruits</span><span class="menu-item__desc">Pomme, ananas, abricot, orange, tomate. 25 cl.</span></div><span class="menu-item__price">3 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Limonade</span><span class="menu-item__desc">25 cl.</span></div><span class="menu-item__price">3 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Diabolo</span><span class="menu-item__desc">Menthe, citron, grenadine, fraise. 25 cl.</span></div><span class="menu-item__price">3 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Sirop à l'eau</span><span class="menu-item__desc">25 cl.</span></div><span class="menu-item__price">2,50 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Perrier</span><span class="menu-item__desc">33 cl.</span></div><span class="menu-item__price">3 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Apfelschorle</span><span class="menu-item__desc">33 cl.</span></div><span class="menu-item__price">3,50 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Citronnade maison</span><span class="menu-item__desc">Citron, sucre, eau. 33 cl.</span></div><span class="menu-item__price">4 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Eau plate ou pétillante</span><span class="menu-item__desc">50 cl / 1,25 L.</span></div><span class="menu-item__price">2,50 / 5 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Milkshake</span><span class="menu-item__desc">Parfum au choix.</span></div><span class="menu-item__price">7 €</span></li>
+            </ul>
+          </div>
+          <div class="menu-group">
+            <h3 class="menu-group__title">Boissons chaudes</h3>
+            <ul class="menu-list">
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Expresso</span></div><span class="menu-item__price">2,50 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Double expresso</span></div><span class="menu-item__price">4,50 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Expresso crème</span></div><span class="menu-item__price">2,80 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Grand café</span></div><span class="menu-item__price">3 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Grand café crème</span></div><span class="menu-item__price">3,30 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Cappuccino</span></div><span class="menu-item__price">3,50 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Latte macchiato</span></div><span class="menu-item__price">4 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Café con panna</span></div><span class="menu-item__price">4 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Chococcino</span></div><span class="menu-item__price">4,50 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Chocolat chaud</span></div><span class="menu-item__price">4 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Infusion ou thé</span></div><span class="menu-item__price">3 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Eis-café</span></div><span class="menu-item__price">6,50 €</span></li>
+              <li class="menu-item"><div class="menu-item__info"><span class="menu-item__name">Irish coffee ou Café alsacien</span></div><span class="menu-item__price">10 €</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ GALERIE ============ -->
+  <section class="section section--alt galerie reveal" id="galerie">
+    <div class="wrap">
+      <header class="section__head">
+        <p class="eyebrow">Galerie</p>
+        <h2 class="h2">L'ambiance de la maison</h2>
+        <p class="section__sub">Les photos de la salle, des plats et de la terrasse arrivent bientôt.</p>
+      </header>
+      <!-- TODO PHOTOS: remplacer ces vignettes par les vraies photos (salle, plats, terrasse, façade). -->
+      <div class="gallery">
+        <figure class="gallery__item"><img src="https://picsum.photos/seed/kaysersbier-g1/700/700" alt="Photo du restaurant" /></figure>
+        <figure class="gallery__item"><img src="https://picsum.photos/seed/kaysersbier-g2/700/700" alt="Photo d'un plat" /></figure>
+        <figure class="gallery__item"><img src="https://picsum.photos/seed/kaysersbier-g3/700/700" alt="Photo de la salle" /></figure>
+        <figure class="gallery__item"><img src="https://picsum.photos/seed/kaysersbier-g4/700/700" alt="Photo de la terrasse" /></figure>
+        <figure class="gallery__item"><img src="https://picsum.photos/seed/kaysersbier-g5/700/700" alt="Photo d'une tarte flambée" /></figure>
+        <figure class="gallery__item"><img src="https://picsum.photos/seed/kaysersbier-g6/700/700" alt="Photo d'un dessert" /></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INFOS ============ -->
+  <section class="section infos reveal" id="infos">
+    <div class="wrap infos__grid">
+      <div class="infos__text">
+        <p class="eyebrow">Infos pratiques</p>
+        <h2 class="h2">Nous rendre visite</h2>
+
+        <div class="infos__block">
+          <h3>Adresse</h3>
+          <p>20 A rue du Général de Gaulle<br />68240 Kaysersberg</p>
+        </div>
+
+        <div class="infos__block">
+          <h3>Horaires</h3>
+          <p class="infos__todo">Horaires d'ouverture à confirmer.</p>
+        </div>
+
+        <div class="infos__block">
+          <h3>Réservations</h3>
+          <p class="infos__todo">Téléphone à confirmer.</p>
+          <a href="#" class="btn btn--primary" id="reserveBtn">Réserver une table</a>
+        </div>
+      </div>
+
+      <div class="infos__map">
+        <iframe
+          title="Localisation du restaurant Kaysers'Bier"
+          src="https://maps.google.com/maps?q=20A%20Rue%20du%20G%C3%A9n%C3%A9ral%20de%20Gaulle%2068240%20Kaysersberg&t=&z=16&ie=UTF8&iwloc=&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <div>
+        <span class="footer__brand">Kaysers'Bier</span>
+        <p class="footer__tag">Cuisine alsacienne au coeur de Kaysersberg.</p>
+      </div>
+      <div>
+        <h4>Adresse</h4>
+        <p>20 A rue du Général de Gaulle<br />68240 Kaysersberg</p>
+      </div>
+      <div>
+        <h4>Explorer</h4>
+        <ul class="footer__links">
+          <li><a href="#maison">La maison</a></li>
+          <li><a href="#carte">La carte</a></li>
+          <li><a href="#galerie">Galerie</a></li>
+          <li><a href="#infos">Infos pratiques</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; <span id="year"></span> Kaysers'Bier. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
