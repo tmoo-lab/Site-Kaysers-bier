@@ -79,6 +79,56 @@
     vids.forEach(function (v) { vio.observe(v); });
   }
 
+  /* ---- Carte MapLibre ---- */
+  var mapEl = document.getElementById("map");
+  if (mapEl && window.maplibregl) {
+    var LNG = 7.2597, LAT = 48.1381;
+    var addr = "20A Rue du Général de Gaulle 68240 Kaysersberg";
+    var dirUrl = "https://www.google.com/maps/dir/?api=1&destination=" + encodeURIComponent(addr);
+    var placeUrl = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("Kaysers'Bier " + addr);
+
+    var map = new maplibregl.Map({
+      container: "map",
+      style: "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json",
+      center: [LNG, LAT],
+      zoom: 15.3,
+      attributionControl: true
+    });
+    map.scrollZoom.disable();
+    map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
+
+    var pin = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>';
+    var nav = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>';
+    var ext = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>';
+
+    var popupHtml =
+      '<div class="mappop">' +
+        '<div class="mappop__img"><img src="images/still-enseigne.jpg" alt="Kaysers\'Bier" /></div>' +
+        '<div class="mappop__body">' +
+          '<p class="mappop__cat">Restaurant alsacien</p>' +
+          '<h3 class="mappop__name">Kaysers\'Bier</h3>' +
+          '<div class="mappop__row">' + pin + '<span>20 A rue du Général de Gaulle, Kaysersberg</span></div>' +
+          '<div class="mappop__actions">' +
+            '<a class="mappop__btn" href="' + dirUrl + '" target="_blank" rel="noopener">' + nav + 'Itinéraire</a>' +
+            '<a class="mappop__btn mappop__btn--icon" href="' + placeUrl + '" target="_blank" rel="noopener" aria-label="Voir sur Google Maps">' + ext + '</a>' +
+          '</div>' +
+        '</div>' +
+      '</div>';
+
+    var popup = new maplibregl.Popup({ offset: 26, closeButton: true, maxWidth: "260px" }).setHTML(popupHtml);
+
+    var el = document.createElement("div");
+    el.className = "map-marker";
+    el.innerHTML = '<div class="map-marker__dot"></div><div class="map-marker__label">Kaysers\'Bier</div>';
+
+    new maplibregl.Marker({ element: el, anchor: "center" })
+      .setLngLat([LNG, LAT])
+      .setPopup(popup)
+      .addTo(map);
+
+    map.on("load", function () { popup.setLngLat([LNG, LAT]).addTo(map); });
+  }
+
   /* ---- Reveal au scroll ---- */
   var reveals = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window) {

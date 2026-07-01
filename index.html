@@ -15,6 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -579,6 +580,7 @@
         <div class="infos__block">
           <h3>Adresse</h3>
           <p>20 A rue du Général de Gaulle<br />68240 Kaysersberg</p>
+          <p><a class="infos__link" href="https://www.google.com/maps/search/?api=1&amp;query=Kaysers%27Bier%2020A%20Rue%20du%20G%C3%A9n%C3%A9ral%20de%20Gaulle%2068240%20Kaysersberg" target="_blank" rel="noopener">Voir sur Google Maps</a></p>
         </div>
 
         <div class="infos__block">
@@ -594,11 +596,7 @@
       </div>
 
       <div class="infos__map">
-        <iframe
-          title="Localisation du restaurant Kaysers'Bier"
-          src="https://maps.google.com/maps?q=20A%20Rue%20du%20G%C3%A9n%C3%A9ral%20de%20Gaulle%2068240%20Kaysersberg&t=&z=16&ie=UTF8&iwloc=&output=embed"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div id="map" aria-label="Carte de localisation du Kaysers'Bier"></div>
       </div>
     </div>
   </section>
@@ -629,6 +627,7 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
