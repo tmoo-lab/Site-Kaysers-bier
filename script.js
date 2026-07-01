@@ -15,6 +15,31 @@
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 
+  /* ---- Hero: agrandissement au défilement ---- */
+  var xReduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var xhero = document.querySelector(".xhero");
+  var xsticky = document.getElementById("xheroSticky");
+  var xreveal = document.getElementById("xheroReveal");
+  if (xhero && xsticky && !xReduce) {
+    var xTicking = false;
+    var updateHero = function () {
+      var total = xhero.offsetHeight - window.innerHeight;
+      var passed = -xhero.getBoundingClientRect().top;
+      var p = total > 0 ? Math.min(Math.max(passed / total, 0), 1) : 0;
+      var pe = Math.min(p / 0.9, 1); // agrandissement terminé un peu avant la fin
+      xsticky.style.setProperty("--p", pe.toFixed(4));
+      if (xreveal) xreveal.classList.toggle("is-live", pe > 0.92);
+      xTicking = false;
+    };
+    window.addEventListener("scroll", function () {
+      if (!xTicking) { xTicking = true; requestAnimationFrame(updateHero); }
+    }, { passive: true });
+    window.addEventListener("resize", updateHero);
+    updateHero();
+  } else if (xreveal) {
+    xreveal.classList.add("is-live");
+  }
+
   /* ---- Menu mobile ---- */
   var burger = document.getElementById("navBurger");
   var links = document.getElementById("navLinks");
@@ -127,8 +152,9 @@
       .setLngLat([LNG, LAT])
       .setPopup(popup)
       .addTo(map);
-
-    map.on("load", function () { popup.setLngLat([LNG, LAT]).addTo(map); });
+    // La popup reste fermée par défaut pour ne pas masquer la carte.
+    // Un clic sur le marqueur (ou son libellé) l'ouvre.
+    el.addEventListener("click", function () { map.flyTo({ center: [LNG, LAT], zoom: 16, duration: 600 }); });
   }
 
   /* ---- Reveal au scroll ---- */

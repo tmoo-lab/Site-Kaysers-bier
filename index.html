@@ -30,7 +30,6 @@
 
       <nav class="nav__links" id="navLinks" aria-label="Navigation principale">
         <a href="#maison">La maison</a>
-        <a href="#incontournables">Incontournables</a>
         <a href="#carte">La carte</a>
         <a href="#galerie">Galerie</a>
         <a href="#infos">Infos</a>
@@ -43,24 +42,35 @@
     </div>
   </header>
 
-  <!-- ============ HERO ============ -->
-  <section class="hero" id="accueil">
-    <!-- Image réelle extraite des vidéos (terrasse). Remplaçable par une photo dédiée si besoin. -->
-    <div class="hero__media">
-      <img src="images/still-terrasse.jpg" alt="La terrasse du restaurant Kaysers'Bier à Kaysersberg" />
-      <div class="hero__scrim"></div>
-    </div>
+  <!-- ============ HERO (défiler pour agrandir) ============ -->
+  <section class="xhero" id="accueil">
+    <div class="xhero__sticky" id="xheroSticky">
+      <div class="xhero__bg">
+        <img src="images/still-rue.jpg" alt="" aria-hidden="true" />
+        <div class="xhero__bg-scrim"></div>
+      </div>
 
-    <div class="hero__content">
-      <p class="eyebrow eyebrow--light">Restaurant alsacien · Kaysersberg</p>
-      <h1 class="hero__title">Kaysers'Bier</h1>
-      <p class="hero__lede">
-        Spécialités d'Alsace, tartes flambées et bières maison, servies dans un
-        cadre chaleureux au coeur de la cité médiévale.
-      </p>
-      <div class="hero__actions">
-        <a href="#carte" class="btn btn--primary">Voir la carte</a>
-        <a href="#infos" class="btn btn--ghost">Nous trouver</a>
+      <div class="xhero__frame">
+        <video muted loop playsinline autoplay preload="metadata" poster="images/still-terrasse.jpg" aria-label="Le Kaysers'Bier en vidéo">
+          <source src="videos/terrasse.mp4" type="video/mp4" />
+        </video>
+        <div class="xhero__frame-scrim"></div>
+      </div>
+
+      <div class="xhero__head">
+        <p class="eyebrow eyebrow--light xhero__eyebrow">Restaurant alsacien · Kaysersberg</p>
+        <h1 class="xhero__title">
+          <span class="xhero__w1">Kaysers'</span><span class="xhero__w2">Bier</span>
+        </h1>
+        <p class="xhero__hint">Faites défiler pour découvrir</p>
+      </div>
+
+      <div class="xhero__reveal" id="xheroReveal">
+        <p class="xhero__lede">Spécialités d'Alsace, tartes flambées et bières maison, au coeur de la cité médiévale.</p>
+        <div class="hero__actions">
+          <a href="#carte" class="btn btn--primary">Voir la carte</a>
+          <a href="#infos" class="btn btn--ghost">Nous trouver</a>
+        </div>
       </div>
     </div>
   </section>
@@ -122,70 +132,8 @@
     </div>
   </section>
 
-  <!-- ============ INCONTOURNABLES ============ -->
-  <section class="section section--alt incontournables reveal" id="incontournables">
-    <div class="wrap">
-      <header class="section__head">
-        <p class="eyebrow">Les incontournables</p>
-        <h2 class="h2">Ce qu'il faut goûter</h2>
-      </header>
-
-      <div class="bento">
-        <article class="tile tile--lg">
-          <!-- Image réelle extraite des vidéos de préparation. -->
-          <img src="images/still-prep3.jpg" alt="Tarte flambée en préparation" />
-          <div class="tile__body">
-            <h3>Tartes flambées</h3>
-            <p>Servies à toute heure, de la nature au Munster. La spécialité de la maison.</p>
-            <span class="tile__price">dès 10 €</span>
-          </div>
-        </article>
-
-        <article class="tile">
-          <!-- TODO PHOTO: choucroute garnie -->
-          <img src="https://picsum.photos/seed/kaysersbier-choucroute-royale/800/700" alt="Choucroute royale" />
-          <div class="tile__body">
-            <h3>Choucroute royale</h3>
-            <p>Choucroute alsacienne et jarret braisé.</p>
-            <span class="tile__price">30 €</span>
-          </div>
-        </article>
-
-        <article class="tile">
-          <!-- TODO PHOTO: chope de bière maison -->
-          <img src="https://picsum.photos/seed/kaysersbier-biere-maison/800/700" alt="Bière maison Kaysers'bier" />
-          <div class="tile__body">
-            <h3>Bières maison</h3>
-            <p>Blonde, blanche, ambrée et brune, à la pression.</p>
-            <span class="tile__price">dès 3 €</span>
-          </div>
-        </article>
-
-        <article class="tile">
-          <!-- TODO PHOTO: baeckeoffe en cocotte -->
-          <img src="https://picsum.photos/seed/kaysersbier-baeckeoffe/800/700" alt="Baeckeoffe alsacien" />
-          <div class="tile__body">
-            <h3>Baeckeoffe</h3>
-            <p>Trois viandes et légumes mijotés au vin blanc.</p>
-            <span class="tile__price">20 €</span>
-          </div>
-        </article>
-
-        <article class="tile">
-          <!-- TODO PHOTO: tarte aux myrtilles -->
-          <img src="https://picsum.photos/seed/kaysersbier-tarte-myrtilles/800/700" alt="Tarte aux myrtilles" />
-          <div class="tile__body">
-            <h3>Tarte aux myrtilles</h3>
-            <p>Le dessert alsacien par excellence.</p>
-            <span class="tile__price">6 €</span>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
   <!-- ============ SAVOIR-FAIRE ============ -->
-  <section class="section savoir reveal" id="savoir">
+  <section class="section section--alt savoir reveal" id="savoir">
     <div class="wrap">
       <header class="section__head section__head--center">
         <h2 class="h2">Le savoir-faire</h2>
