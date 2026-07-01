@@ -59,25 +59,55 @@
     });
   }
 
-  /* ---- Onglets de la carte ---- */
-  var tabs = document.querySelectorAll(".tab");
+  /* ---- Carte: navigation "hover slider" ---- */
+  var hsItems = document.querySelectorAll(".hs-item");
+  var hsImgs = document.querySelectorAll(".hs-img");
   var panels = document.querySelectorAll(".menu-panel");
-  tabs.forEach(function (tab) {
-    tab.addEventListener("click", function () {
-      var targetId = tab.getAttribute("data-target");
 
-      tabs.forEach(function (t) {
-        var active = t === tab;
-        t.classList.toggle("is-active", active);
-        t.setAttribute("aria-selected", active ? "true" : "false");
-      });
-
-      panels.forEach(function (p) {
-        var show = p.id === targetId;
-        p.classList.toggle("is-active", show);
-        p.hidden = !show;
-      });
+  // Animation lettre par lettre (effet stagger au survol / à la sélection)
+  document.querySelectorAll(".hs-roll").forEach(function (roll) {
+    var text = roll.getAttribute("data-text") || "";
+    var frag = document.createDocumentFragment();
+    text.split("").forEach(function (ch, i) {
+      var wrap = document.createElement("span");
+      wrap.className = "hs-char";
+      var display = ch === " " ? " " : ch;
+      var a = document.createElement("span");
+      a.className = "hs-a";
+      a.textContent = display;
+      var b = document.createElement("span");
+      b.className = "hs-b";
+      b.textContent = display;
+      var delay = (i * 0.025).toFixed(3) + "s";
+      a.style.transitionDelay = delay;
+      b.style.transitionDelay = delay;
+      wrap.appendChild(a);
+      wrap.appendChild(b);
+      frag.appendChild(wrap);
     });
+    roll.appendChild(frag);
+  });
+
+  function activateCategory(target) {
+    hsItems.forEach(function (it) {
+      var on = it.getAttribute("data-target") === target;
+      it.classList.toggle("is-active", on);
+      it.setAttribute("aria-selected", on ? "true" : "false");
+    });
+    hsImgs.forEach(function (im) {
+      im.classList.toggle("is-active", im.getAttribute("data-target") === target);
+    });
+    panels.forEach(function (p) {
+      var on = p.id === target;
+      p.classList.toggle("is-active", on);
+      p.hidden = !on;
+    });
+  }
+  hsItems.forEach(function (it) {
+    var t = it.getAttribute("data-target");
+    it.addEventListener("mouseenter", function () { activateCategory(t); });
+    it.addEventListener("click", function () { activateCategory(t); });
+    it.addEventListener("focus", function () { activateCategory(t); });
   });
 
   /* ---- Vidéos: lecture quand visibles (pause sinon) ---- */

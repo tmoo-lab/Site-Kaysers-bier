@@ -32,6 +32,7 @@
         <a href="#maison">La maison</a>
         <a href="#carte">La carte</a>
         <a href="#galerie">Galerie</a>
+        <a href="#avis">Avis</a>
         <a href="#infos">Infos</a>
         <a href="#infos" class="btn btn--sm btn--primary nav__cta">Réserver</a>
       </nav>
@@ -167,14 +168,25 @@
         <p class="section__sub">Cuisine alsacienne, tartes flambées, vins de la région et bières maison. Prix service compris.</p>
       </header>
 
-      <div class="tabs" id="menuTabs" role="tablist" aria-label="Catégories de la carte">
-        <button class="tab is-active" role="tab" aria-selected="true" data-target="cat-specialites">Spécialités</button>
-        <button class="tab" role="tab" aria-selected="false" data-target="cat-tartes">Tartes flambées &amp; crêpes</button>
-        <button class="tab" role="tab" aria-selected="false" data-target="cat-burgers">Burgers &amp; petits plats</button>
-        <button class="tab" role="tab" aria-selected="false" data-target="cat-desserts">Desserts &amp; douceurs</button>
-        <button class="tab" role="tab" aria-selected="false" data-target="cat-vins">Vins &amp; crémants</button>
-        <button class="tab" role="tab" aria-selected="false" data-target="cat-bieres">Bières &amp; cocktails</button>
-        <button class="tab" role="tab" aria-selected="false" data-target="cat-boissons">Boissons</button>
+      <div class="hoverslider" id="menuNav">
+        <ul class="hs-list" role="tablist" aria-label="Catégories de la carte">
+          <li><button type="button" class="hs-item is-active" role="tab" aria-selected="true" data-target="cat-specialites" data-img="images/still-salle1.jpg"><span class="hs-roll" data-text="Spécialités"></span></button></li>
+          <li><button type="button" class="hs-item" role="tab" aria-selected="false" data-target="cat-tartes" data-img="images/still-prep3.jpg"><span class="hs-roll" data-text="Tartes flambées"></span></button></li>
+          <li><button type="button" class="hs-item" role="tab" aria-selected="false" data-target="cat-burgers" data-img="images/still-terrasse.jpg"><span class="hs-roll" data-text="Burgers"></span></button></li>
+          <li><button type="button" class="hs-item" role="tab" aria-selected="false" data-target="cat-desserts" data-img="images/still-cour.jpg"><span class="hs-roll" data-text="Desserts"></span></button></li>
+          <li><button type="button" class="hs-item" role="tab" aria-selected="false" data-target="cat-vins" data-img="images/still-cave1.jpg"><span class="hs-roll" data-text="Vins"></span></button></li>
+          <li><button type="button" class="hs-item" role="tab" aria-selected="false" data-target="cat-bieres" data-img="images/still-rue.jpg"><span class="hs-roll" data-text="Bières"></span></button></li>
+          <li><button type="button" class="hs-item" role="tab" aria-selected="false" data-target="cat-boissons" data-img="images/still-salle2.jpg"><span class="hs-roll" data-text="Boissons"></span></button></li>
+        </ul>
+        <div class="hs-media" aria-hidden="true">
+          <img class="hs-img is-active" data-target="cat-specialites" src="images/still-salle1.jpg" alt="" />
+          <img class="hs-img" data-target="cat-tartes" src="images/still-prep3.jpg" alt="" />
+          <img class="hs-img" data-target="cat-burgers" src="images/still-terrasse.jpg" alt="" />
+          <img class="hs-img" data-target="cat-desserts" src="images/still-cour.jpg" alt="" />
+          <img class="hs-img" data-target="cat-vins" src="images/still-cave1.jpg" alt="" />
+          <img class="hs-img" data-target="cat-bieres" src="images/still-rue.jpg" alt="" />
+          <img class="hs-img" data-target="cat-boissons" src="images/still-salle2.jpg" alt="" />
+        </div>
       </div>
 
       <!-- SPECIALITES -->
@@ -543,6 +555,45 @@
     </div>
   </section>
 
+  <!-- ============ AVIS ============ -->
+  <section class="section testi reveal" id="avis">
+    <div class="wrap">
+      <header class="section__head section__head--center">
+        <p class="eyebrow">Avis clients</p>
+        <h2 class="h2">Ils en parlent</h2>
+        <p class="section__sub">4,4 / 5 sur les avis en ligne.</p>
+      </header>
+
+      <div class="testi__cols">
+        <div class="tcol">
+          <div class="tcol__track" style="--dur: 34s;">
+            <figure class="tcard"><div class="tcard__stars">★★★★★</div><blockquote class="tcard__text">Un havre de paix. Accueil très aimable, le personnel garde toujours le sourire et le repas était excellent. Rapport qualité-prix tout à fait raisonnable.</blockquote><figcaption class="tcard__author"><span class="tcard__avatar">A</span><span class="tcard__meta"><span class="tcard__name">Ariane &amp; Jean-Loup</span><span class="tcard__role">Belgique · TripAdvisor</span></span></figcaption></figure>
+            <figure class="tcard"><div class="tcard__stars">★★★★★</div><blockquote class="tcard__text">Endroit sympathique, personnel à l'écoute. Très bon rapport qualité prix. Flamme aux myrtilles succulente et originale. On recommande.</blockquote><figcaption class="tcard__author"><span class="tcard__avatar">P</span><span class="tcard__meta"><span class="tcard__name">Pat F.</span><span class="tcard__role">TripAdvisor</span></span></figcaption></figure>
+            <figure class="tcard"><div class="tcard__stars">★★★★<span class="dim">★</span></div><blockquote class="tcard__text">En terrasse, petit soleil, bon emplacement, ambiance sympa. Efficaces et pas très chers. Je recommande pour une p'tite pause.</blockquote><figcaption class="tcard__author"><span class="tcard__avatar">G</span><span class="tcard__meta"><span class="tcard__name">Geoffrey R.</span><span class="tcard__role">TripAdvisor</span></span></figcaption></figure>
+            <figure class="tcard"><div class="tcard__stars">★★★★<span class="dim">★</span></div><blockquote class="tcard__text">Une bonne tarte flambée et du bon vin de chez Haas. Terrasse ensoleillée et prix corrects. Un repas simple, sans chichi.</blockquote><figcaption class="tcard__author"><span class="tcard__avatar">A</span><span class="tcard__meta"><span class="tcard__name">Alain V.</span><span class="tcard__role">Yutz, France · TripAdvisor</span></span></figcaption></figure>
+            <figure class="tcard dup" aria-hidden="true"><div class="tcard__stars">★★★★★</div><blockquote class="tcard__text">Un havre de paix. Accueil très aimable, le personnel garde toujours le sourire et le repas était excellent. Rapport qualité-prix tout à fait raisonnable.</blockquote><figcaption class="tcard__author"><span class="tcard__avatar">A</span><span class="tcard__meta"><span class="tcard__name">Ariane &amp; Jean-Loup</span><span class="tcard__role">Belgique · TripAdvisor</span></span></figcaption></figure>
+            <figure class="tcard dup" aria-hidden="true"><div class="tcard__stars">★★★★★</div><blockquote class="tcard__text">Endroit sympathique, personnel à l'écoute. Très bon rapport qualité prix. Flamme aux myrtilles succulente et originale. On recommande.</blockquote><figcaption class="tcard__author"><span class="tcard__avatar">P</span><span class="tcard__meta"><span class="tcard__name">Pat F.</span><span class="tcard__role">TripAdvisor</span></span></figcaption></figure>
+            <figure class="tcard dup" aria-hidden="true"><div class="tcard__stars">★★★★<span class="dim">★</span></div><blockquote class="tcard__text">En terrasse, petit soleil, bon emplacement, ambiance sympa. Efficaces et pas très chers. Je recommande pour une p'tite pause.</blockquote><figcaption class="tcard__author"><span class="tcard__avatar">G</span><span class="tcard__meta"><span class="tcard__name">Geoffrey R.</span><span class="tcard__role">TripAdvisor</span></span></figcaption></figure>
+            <figure class="tcard dup" aria-hidden="true"><div class="tcard__stars">★★★★<span class="dim">★</span></div><blockquote class="tcard__text">Une bonne tarte flambée et du bon vin de chez Haas. Terrasse ensoleillée et prix corrects. Un repas simple, sans chichi.</blockquote><figcaption class="tcard__author"><span class="tcard__avatar">A</span><span class="tcard__meta"><span class="tcard__name">Alain V.</span><span class="tcard__role">Yutz, France · TripAdvisor</span></span></figcaption></figure>
+          </div>
+        </div>
+
+        <div class="tcol tcol--b">
+          <div class="tcol__track" style="--dur: 44s;">
+            <figure class="tcard"><div class="tcard__stars">★★★★<span class="dim">★</span></div><blockquote class="tcard__text">Une bonne tarte flambée et du bon vin de chez Haas. Terrasse ensoleillée et prix corrects. Un repas simple, sans chichi.</blockquote><figcaption class="tcard__author"><span class="tcard__avatar">A</span><span class="tcard__meta"><span class="tcard__name">Alain V.</span><span class="tcard__role">Yutz, France · TripAdvisor</span></span></figcaption></figure>
+            <figure class="tcard"><div class="tcard__stars">★★★★★</div><blockquote class="tcard__text">Endroit sympathique, personnel à l'écoute. Très bon rapport qualité prix. Flamme aux myrtilles succulente et originale. On recommande.</blockquote><figcaption class="tcard__author"><span class="tcard__avatar">P</span><span class="tcard__meta"><span class="tcard__name">Pat F.</span><span class="tcard__role">TripAdvisor</span></span></figcaption></figure>
+            <figure class="tcard"><div class="tcard__stars">★★★★★</div><blockquote class="tcard__text">Un havre de paix. Accueil très aimable, le personnel garde toujours le sourire et le repas était excellent. Rapport qualité-prix tout à fait raisonnable.</blockquote><figcaption class="tcard__author"><span class="tcard__avatar">A</span><span class="tcard__meta"><span class="tcard__name">Ariane &amp; Jean-Loup</span><span class="tcard__role">Belgique · TripAdvisor</span></span></figcaption></figure>
+            <figure class="tcard"><div class="tcard__stars">★★★★<span class="dim">★</span></div><blockquote class="tcard__text">En terrasse, petit soleil, bon emplacement, ambiance sympa. Efficaces et pas très chers. Je recommande pour une p'tite pause.</blockquote><figcaption class="tcard__author"><span class="tcard__avatar">G</span><span class="tcard__meta"><span class="tcard__name">Geoffrey R.</span><span class="tcard__role">TripAdvisor</span></span></figcaption></figure>
+            <figure class="tcard dup" aria-hidden="true"><div class="tcard__stars">★★★★<span class="dim">★</span></div><blockquote class="tcard__text">Une bonne tarte flambée et du bon vin de chez Haas. Terrasse ensoleillée et prix corrects. Un repas simple, sans chichi.</blockquote><figcaption class="tcard__author"><span class="tcard__avatar">A</span><span class="tcard__meta"><span class="tcard__name">Alain V.</span><span class="tcard__role">Yutz, France · TripAdvisor</span></span></figcaption></figure>
+            <figure class="tcard dup" aria-hidden="true"><div class="tcard__stars">★★★★★</div><blockquote class="tcard__text">Endroit sympathique, personnel à l'écoute. Très bon rapport qualité prix. Flamme aux myrtilles succulente et originale. On recommande.</blockquote><figcaption class="tcard__author"><span class="tcard__avatar">P</span><span class="tcard__meta"><span class="tcard__name">Pat F.</span><span class="tcard__role">TripAdvisor</span></span></figcaption></figure>
+            <figure class="tcard dup" aria-hidden="true"><div class="tcard__stars">★★★★★</div><blockquote class="tcard__text">Un havre de paix. Accueil très aimable, le personnel garde toujours le sourire et le repas était excellent. Rapport qualité-prix tout à fait raisonnable.</blockquote><figcaption class="tcard__author"><span class="tcard__avatar">A</span><span class="tcard__meta"><span class="tcard__name">Ariane &amp; Jean-Loup</span><span class="tcard__role">Belgique · TripAdvisor</span></span></figcaption></figure>
+            <figure class="tcard dup" aria-hidden="true"><div class="tcard__stars">★★★★<span class="dim">★</span></div><blockquote class="tcard__text">En terrasse, petit soleil, bon emplacement, ambiance sympa. Efficaces et pas très chers. Je recommande pour une p'tite pause.</blockquote><figcaption class="tcard__author"><span class="tcard__avatar">G</span><span class="tcard__meta"><span class="tcard__name">Geoffrey R.</span><span class="tcard__role">TripAdvisor</span></span></figcaption></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ INFOS ============ -->
   <section class="section infos reveal" id="infos">
     <div class="wrap infos__grid">
@@ -558,7 +609,7 @@
 
         <div class="infos__block">
           <h3>Horaires</h3>
-          <p class="infos__todo">Horaires d'ouverture à confirmer.</p>
+          <p>Tous les jours<br />10h - 18h</p>
         </div>
 
         <div class="infos__block">
