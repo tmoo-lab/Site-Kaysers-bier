@@ -148,6 +148,9 @@ p { color: var(--ink-soft); }
   transition: width 0.25s var(--ease);
 }
 .nav__links a:not(.btn):hover::after { width: 100%; }
+.nav__links a:not(.btn).is-current { color: var(--wine); }
+.nav.is-scrolled .nav__links a:not(.btn).is-current { color: var(--wine); }
+.nav__links a:not(.btn).is-current::after { width: 100%; background: var(--wine); }
 
 /* scrolled state -> solid paper nav */
 .nav.is-scrolled {
@@ -605,7 +608,8 @@ p { color: var(--ink-soft); }
   max-width: 840px;
   margin: 0 auto;
 }
-.video-card { display: flex; flex-direction: column; gap: 0.6rem; }
+.video-card { display: flex; flex-direction: column; gap: 0.6rem; transition: transform 0.35s var(--ease); }
+.video-card:hover { transform: translateY(-4px); }
 .video-card video {
   width: 100%;
   aspect-ratio: 9 / 16;
@@ -650,7 +654,9 @@ p { color: var(--ink-soft); }
   border-radius: var(--radius);
   padding: 1.6rem;
   box-shadow: var(--shadow-sm);
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
 }
+.tcard:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
 .tcard__stars { color: #f59e0b; letter-spacing: 2px; font-size: 0.95rem; margin-bottom: 0.7rem; }
 .tcard__stars .dim { color: var(--line); }
 .tcard__text { color: var(--ink); font-size: 0.98rem; line-height: 1.55; font-weight: 300; }

@@ -205,4 +205,32 @@
   } else {
     reveals.forEach(function (el) { el.classList.add("reveal-in"); });
   }
+
+  /* ---- Scrollspy: surligne le lien de la section visible ---- */
+  var spyLinks = {};
+  document.querySelectorAll(".nav__links a").forEach(function (a) {
+    if (a.classList.contains("btn")) return;
+    var href = a.getAttribute("href") || "";
+    if (href.charAt(0) === "#") spyLinks[href.slice(1)] = a;
+  });
+  var spyIds = Object.keys(spyLinks);
+  if (spyIds.length && "IntersectionObserver" in window) {
+    var spy = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            spyIds.forEach(function (k) {
+              spyLinks[k].classList.toggle("is-current", k === id);
+            });
+          }
+        });
+      },
+      { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
+    );
+    spyIds.forEach(function (id) {
+      var sec = document.getElementById(id);
+      if (sec) spy.observe(sec);
+    });
+  }
 })();
