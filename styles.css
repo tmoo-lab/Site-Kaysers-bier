@@ -414,6 +414,41 @@ p { color: var(--ink-soft); }
 }
 .gallery__item:hover img { transform: scale(1.06); }
 
+/* ---------- Carrousel d'images (auto-slider) ---------- */
+.slider-sec { padding: clamp(2.5rem, 6vw, 4.5rem) 0; overflow: hidden; }
+.slider {
+  width: 100%;
+  overflow: hidden;
+  -webkit-mask: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+  mask: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+}
+.slider__track {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: slide-x 36s linear infinite;
+}
+.slider:hover .slider__track { animation-play-state: paused; }
+.slider__item {
+  flex: none;
+  width: clamp(180px, 22vw, 300px);
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.slider__item img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s var(--ease), filter 0.3s var(--ease);
+}
+.slider__item:hover img { transform: scale(1.05); filter: brightness(1.08); }
+@keyframes slide-x {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
 /* ---------- Vidéos ---------- */
 .videos {
   display: grid;
@@ -543,6 +578,17 @@ p { color: var(--ink-soft); }
   line-height: 1.1;
   margin-bottom: 0.5rem;
 }
+.mappop__rating {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+.mappop__rating svg { width: 15px; height: 15px; }
+.mappop__rating span { color: var(--ink-soft); font-size: 0.82rem; }
+.mappop__rating .mappop__muted { margin-left: 0.15rem; }
 .mappop__row {
   display: flex;
   align-items: flex-start;
@@ -678,4 +724,7 @@ p { color: var(--ink-soft); }
   html { scroll-behavior: auto; }
   * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
   .reveal { opacity: 1; transform: none; }
+  /* Carrousel figé mais consultable au défilement manuel */
+  .slider { overflow-x: auto; }
+  .slider__track { animation: none; }
 }
