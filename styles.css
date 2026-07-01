@@ -420,6 +420,13 @@ p { color: var(--ink-soft); }
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1rem;
 }
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  max-width: 840px;
+  margin: 0 auto;
+}
 .video-card { display: flex; flex-direction: column; gap: 0.6rem; }
 .video-card video {
   width: 100%;
@@ -545,7 +552,7 @@ p { color: var(--ink-soft); }
   .hero__actions .btn { flex: 1 1 auto; }
 
   /* Vidéos: rangée défilable au doigt */
-  .videos {
+  .videos, .steps {
     grid-template-columns: none;
     grid-auto-flow: column;
     grid-auto-columns: 62%;
