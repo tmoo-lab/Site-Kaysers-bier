@@ -1,25 +1,32 @@
-# Photos du site
+# Médias du site
 
-Pour l'instant, le site utilise des images de remplacement (placeholders) afin de
-tenir la mise en page. Il suffit de les remplacer par tes vraies photos.
+## Vidéos (déjà intégrées)
 
-## Photos à fournir (par ordre de priorité)
+Les 5 vidéos fournies (format iPhone HEVC) ont été converties en MP4 léger,
+compatibles avec tous les navigateurs, et placées dans le dossier `videos/` :
 
-1. **Hero (accueil)** : une belle photo horizontale (salle, plat signature ou façade).
-   Format paysage, idéalement 1800 x 1200 px minimum.
-2. **La maison** : une photo verticale (portrait) d'un plat ou de la salle.
-3. **Les incontournables** : 5 photos (tarte flambée, choucroute, bière maison,
-   baeckeoffe, tarte aux myrtilles).
-4. **Galerie** : 6 photos (salle, plats, terrasse, façade, ambiance...).
+- `terrasse.mp4` : la terrasse
+- `rue.mp4` : la rue au coeur du village
+- `cour.mp4` : la cour fleurie
+- `cave1.mp4` / `cave2.mp4` : la cave à vins d'Alsace
 
-## Comment remplacer une image
+Elles s'affichent dans la section « Galerie » (lecture automatique, sans son,
+en boucle, uniquement quand elles sont visibles). Des images fixes en ont été
+extraites (`images/still-*.jpg`) et servent d'aperçu ainsi que d'illustration
+pour le hero (accueil) et la section « La maison ».
 
-Chaque image de remplacement est repérée dans `index.html` par un commentaire
-`<!-- TODO PHOTO: ... -->`. Il suffit de :
+## Photos encore utiles
 
-1. Déposer la photo dans ce dossier `images/` (ex. `hero.jpg`).
-2. Dans `index.html`, remplacer l'URL `https://picsum.photos/...` par
-   `images/hero.jpg`.
+Le site est déjà illustré avec des images réelles issues des vidéos. Pour aller
+plus loin, ces photos seraient les bienvenues :
 
-Astuce : garde des noms de fichiers simples et en minuscules, sans accents ni
-espaces (ex. `choucroute.jpg`, `salle-1.jpg`).
+1. **Plats** : tarte flambée, choucroute, baeckeoffe, desserts (pour la section
+   « Les incontournables », qui utilise encore des images de remplacement).
+2. **Salle intérieure** et **façade** en plein jour.
+
+## Remplacer une image
+
+1. Déposer la photo dans ce dossier `images/` (nom simple, sans accent ni
+   espace, ex. `tarte-flambee.jpg`).
+2. Dans `index.html`, remplacer l'URL correspondante (les emplacements encore en
+   placeholder sont repérés par un commentaire `<!-- TODO PHOTO ... -->`).

@@ -44,9 +44,9 @@
 
   <!-- ============ HERO ============ -->
   <section class="hero" id="accueil">
-    <!-- TODO PHOTO: remplacer par une belle photo de la salle, d'un plat signature ou de la façade (paysage, min 1600x1100). -->
+    <!-- Image réelle extraite des vidéos (terrasse). Remplaçable par une photo dédiée si besoin. -->
     <div class="hero__media">
-      <img src="https://picsum.photos/seed/kaysersbier-hero-alsace/1800/1200" alt="Ambiance du restaurant Kaysers'Bier" />
+      <img src="images/still-terrasse.jpg" alt="La terrasse du restaurant Kaysers'Bier à Kaysersberg" />
       <div class="hero__scrim"></div>
     </div>
 
@@ -90,8 +90,8 @@
         </ul>
       </div>
       <div class="maison__media">
-        <!-- TODO PHOTO: photo verticale d'un plat signature ou de la salle (portrait, min 900x1200). -->
-        <img src="https://picsum.photos/seed/kaysersbier-plat-choucroute/900/1200" alt="Plat alsacien servi au Kaysers'Bier" />
+        <!-- Image réelle extraite des vidéos (cave à vins d'Alsace). -->
+        <img src="images/still-cave1.jpg" alt="Cave à vins d'Alsace du Kaysers'Bier" />
       </div>
     </div>
   </section>
@@ -481,16 +481,39 @@
       <header class="section__head">
         <p class="eyebrow">Galerie</p>
         <h2 class="h2">L'ambiance de la maison</h2>
-        <p class="section__sub">Les photos de la salle, des plats et de la terrasse arrivent bientôt.</p>
+        <p class="section__sub">Quelques images, de la terrasse à la cave à vins.</p>
       </header>
-      <!-- TODO PHOTOS: remplacer ces vignettes par les vraies photos (salle, plats, terrasse, façade). -->
-      <div class="gallery">
-        <figure class="gallery__item"><img src="https://picsum.photos/seed/kaysersbier-g1/700/700" alt="Photo du restaurant" /></figure>
-        <figure class="gallery__item"><img src="https://picsum.photos/seed/kaysersbier-g2/700/700" alt="Photo d'un plat" /></figure>
-        <figure class="gallery__item"><img src="https://picsum.photos/seed/kaysersbier-g3/700/700" alt="Photo de la salle" /></figure>
-        <figure class="gallery__item"><img src="https://picsum.photos/seed/kaysersbier-g4/700/700" alt="Photo de la terrasse" /></figure>
-        <figure class="gallery__item"><img src="https://picsum.photos/seed/kaysersbier-g5/700/700" alt="Photo d'une tarte flambée" /></figure>
-        <figure class="gallery__item"><img src="https://picsum.photos/seed/kaysersbier-g6/700/700" alt="Photo d'un dessert" /></figure>
+      <div class="videos">
+        <figure class="video-card">
+          <video muted loop playsinline preload="none" poster="images/still-terrasse.jpg" aria-label="La terrasse">
+            <source src="videos/terrasse.mp4" type="video/mp4" />
+          </video>
+          <figcaption>La terrasse</figcaption>
+        </figure>
+        <figure class="video-card">
+          <video muted loop playsinline preload="none" poster="images/still-rue.jpg" aria-label="Notre rue à Kaysersberg">
+            <source src="videos/rue.mp4" type="video/mp4" />
+          </video>
+          <figcaption>Au coeur du village</figcaption>
+        </figure>
+        <figure class="video-card">
+          <video muted loop playsinline preload="none" poster="images/still-cour.jpg" aria-label="La cour fleurie">
+            <source src="videos/cour.mp4" type="video/mp4" />
+          </video>
+          <figcaption>La cour fleurie</figcaption>
+        </figure>
+        <figure class="video-card">
+          <video muted loop playsinline preload="none" poster="images/still-cave1.jpg" aria-label="La cave à vins d'Alsace">
+            <source src="videos/cave1.mp4" type="video/mp4" />
+          </video>
+          <figcaption>La cave à vins</figcaption>
+        </figure>
+        <figure class="video-card">
+          <video muted loop playsinline preload="none" poster="images/still-cave2.jpg" aria-label="Nos vins d'Alsace">
+            <source src="videos/cave2.mp4" type="video/mp4" />
+          </video>
+          <figcaption>Nos vins d'Alsace</figcaption>
+        </figure>
       </div>
     </div>
   </section>

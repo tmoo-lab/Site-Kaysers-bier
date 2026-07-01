@@ -55,6 +55,30 @@
     });
   });
 
+  /* ---- Vidéos: lecture quand visibles (pause sinon) ---- */
+  var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var vids = document.querySelectorAll(".video-card video");
+  if (vids.length && "IntersectionObserver" in window) {
+    var vio = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          var v = entry.target;
+          if (entry.isIntersecting) {
+            if (v.preload === "none") v.preload = "metadata";
+            if (!prefersReduced) {
+              var p = v.play();
+              if (p && p.catch) p.catch(function () {});
+            }
+          } else {
+            v.pause();
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+    vids.forEach(function (v) { vio.observe(v); });
+  }
+
   /* ---- Reveal au scroll ---- */
   var reveals = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window) {
