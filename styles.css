@@ -927,17 +927,9 @@ p { color: var(--ink-soft); }
   .tile--lg { grid-column: auto; }
   .gallery { grid-template-columns: repeat(2, 1fr); }
 
-  /* Avis: une seule colonne, statique et défilable */
-  .testi__cols {
-    grid-template-columns: 1fr;
-    height: auto;
-    overflow: visible;
-    -webkit-mask: none;
-    mask: none;
-  }
+  /* Avis: une seule colonne, mais toujours animée */
+  .testi__cols { grid-template-columns: 1fr; height: 560px; }
   .tcol--b, .tcol--c { display: none; }
-  .tcol__track { animation: none; }
-  .tcard.dup { display: none; }
   .footer__grid { grid-template-columns: 1fr; }
   .hero__actions .btn { flex: 1 1 auto; }
 
