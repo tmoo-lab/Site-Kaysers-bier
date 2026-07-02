@@ -221,7 +221,7 @@ p { color: var(--ink-soft); }
 .hero__actions { display: flex; gap: 1rem; flex-wrap: wrap; }
 
 /* ---------- Hero "défiler pour agrandir" ---------- */
-.xhero { position: relative; height: 240vh; background: var(--ink); }
+.xhero { position: relative; height: 150vh; background: var(--ink); }
 .xhero__sticky {
   --p: 0;
   position: sticky;
